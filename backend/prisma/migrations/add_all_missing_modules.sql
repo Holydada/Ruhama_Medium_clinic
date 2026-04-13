@@ -1,0 +1,11 @@
+-- Migration: Add All Missing Modules (Nurse, Emergency, Certificates, Inventory)
+-- This migration adds comprehensive support for:
+-- 1. Nurse Module (Triage, Vital Signs, Nursing Notes)
+-- 2. Enhanced Injection Room (Administration tracking)
+-- 3. Emergency Module (Fast registration and triage)
+-- 4. Doctor Encounters (Enhanced SOAP notes)
+-- 5. Medical Certificates (Sick Leave, General Medical)
+-- 6. Inventory & Store Module (Complete stock management)
+
+-- Note: Run this after backing up your database
+-- Command: psql -U your_user -d your_database -f add_all_missing_modules.sql

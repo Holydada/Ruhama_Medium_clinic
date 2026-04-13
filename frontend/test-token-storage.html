@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Token Storage Test</title>
+</head>
+<body>
+    <h1>Token Storage Test</h1>
+    <button onclick="checkStorage()">Check LocalStorage</button>
+    <pre id="output"></pre>
+    
+    <script>
+        function checkStorage() {
+            const raw = localStorage.getItem('ruhama_auth');
+            const output = document.getElementById('output');
+            
+            if (!raw) {
+                output.textContent = 'No ruhama_auth found in localStorage';
+                return;
+            }
+            
+            try {
+                const parsed = JSON.parse(raw);
+                output.textContent = JSON.stringify(parsed, null, 2);
+                
+                console.log('Raw storage:', raw);
+                console.log('Parsed:', parsed);
+                console.log('Has accessToken:', !!parsed.accessToken);
+                console.log('Has user:', !!parsed.user);
+            } catch (e) {
+                output.textContent = 'Error parsing: ' + e.message;
+            }
+        }
+        
+        // Auto-check on load
+        window.onload = checkStorage;
+    </script>
+</body>
+</html>

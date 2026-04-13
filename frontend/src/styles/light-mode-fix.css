@@ -1,0 +1,135 @@
+/* Light Mode Text Visibility Fix - Only for Dashboards */
+/* Apply dark text only when user is authenticated (not on landing/login/register) */
+
+/* Target only pages with the app layout (authenticated pages) */
+body:not(.public-page) {
+  color: #1e293b !important;
+}
+
+/* Headings - only in authenticated pages */
+body:not(.public-page) h1,
+body:not(.public-page) h2,
+body:not(.public-page) h3,
+body:not(.public-page) h4,
+body:not(.public-page) h5,
+body:not(.public-page) h6 {
+  color: #0f172a !important;
+}
+
+/* Paragraphs and general text - only in authenticated pages */
+body:not(.public-page) p,
+body:not(.public-page) span:not(header *),
+body:not(.public-page) div:not(header *),
+body:not(.public-page) label,
+body:not(.public-page) td,
+body:not(.public-page) th {
+  color: #334155 !important;
+}
+
+/* Stats and numbers */
+body:not(.public-page) .text-3xl,
+body:not(.public-page) .text-2xl,
+body:not(.public-page) .text-xl,
+body:not(.public-page) .text-lg {
+  color: #0f172a !important;
+}
+
+/* Card titles and descriptions */
+body:not(.public-page) .font-semibold,
+body:not(.public-page) .font-medium,
+body:not(.public-page) .font-bold {
+  color: #1e293b !important;
+}
+
+/* Small text and labels */
+body:not(.public-page) .text-sm,
+body:not(.public-page) .text-xs {
+  color: #475569 !important;
+}
+
+/* Muted text */
+body:not(.public-page) .text-slate-500,
+body:not(.public-page) .text-slate-600,
+body:not(.public-page) .text-gray-500,
+body:not(.public-page) .text-gray-600 {
+  color: #64748b !important;
+}
+
+/* Links */
+body:not(.public-page) a:not(header a) {
+  color: #0ea5e9 !important;
+}
+
+body:not(.public-page) a:not(header a):hover {
+  color: #0284c7 !important;
+}
+
+/* Input text */
+body:not(.public-page) input,
+body:not(.public-page) textarea,
+body:not(.public-page) select {
+  color: #1e293b !important;
+}
+
+/* Table text */
+body:not(.public-page) table {
+  color: #334155 !important;
+}
+
+/* Badge text - keep white */
+body:not(.public-page) .badge,
+body:not(.public-page) [class*="badge"] {
+  color: #ffffff !important;
+}
+
+/* Ensure stat cards are visible */
+body:not(.public-page) [class*="stat"] {
+  color: #0f172a !important;
+}
+
+/* Dashboard specific fixes */
+body:not(.public-page) .dashboard-title {
+  color: #0f172a !important;
+}
+
+body:not(.public-page) .dashboard-subtitle {
+  color: #475569 !important;
+}
+
+/* Card content */
+body:not(.public-page) .card-title {
+  color: #0f172a !important;
+}
+
+body:not(.public-page) .card-text {
+  color: #334155 !important;
+}
+
+/* Override any white text in dashboards (but not in header or badges) */
+body:not(.public-page) .text-white:not(header *):not(button):not(.badge) {
+  color: #1e293b !important;
+}
+
+/* Keep header dark with light text */
+header,
+[role="banner"] {
+  background-color: #0f172a !important;
+}
+
+header *,
+[role="banner"] * {
+  color: #f1f5f9 !important;
+}
+
+/* Keep buttons readable */
+button.bg-sky-500,
+button.bg-blue-500,
+button.bg-green-500,
+button.bg-red-500 {
+  color: #ffffff !important;
+}
+
+/* Ensure icons inherit color */
+svg {
+  color: inherit;
+}

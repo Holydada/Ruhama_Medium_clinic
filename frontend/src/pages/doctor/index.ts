@@ -1,0 +1,9 @@
+export { default as DoctorDashboard } from './DoctorDashboard';
+export { default as PatientQueue } from './PatientQueue';
+export { default as PatientChart } from './PatientChart';
+export { default as EncounterForm } from './EncounterForm';
+export { default as PrescriptionForm } from './PrescriptionForm';
+export { default as LabOrderForm } from './LabOrderForm';
+export { default as InjectionOrderForm } from './InjectionOrderForm';
+export { default as ReferralForm } from './ReferralForm';
+export { default as OrderManagement } from './OrderManagement';
